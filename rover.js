@@ -2,15 +2,16 @@ const Message = require(`./message.js`)
 
 
 class Rover {
-   constructor(position = `position`, mode = `NORMAL`, generatorWatts = 110) {
+   constructor(position = 0) {
       this.position = position;
-      this.mode = mode;
-      this.generatorWatts = generatorWatts;
+      this.mode = `NORMAL`;
+      this.generatorWatts = 110;
       
    }
-   receiveMessage = function receiveMessage(message) {
-      return message.name
-   }
-}
+   receiveMessage(message) {
+      
+      return message; //returns object with name and array of command objects
+   };
+};
 
 module.exports = Rover;
