@@ -4,7 +4,7 @@ const Command = require('../command.js');
 //       However, do NOT edit the grading tests for any reason and make sure to un-comment out your code to get the autograder to pass.
 
 beforeAll(() => {
- newCommand = new Command("up", 5)
+ newCommand = new Command('MODE_CHANGE', 'LOW_POWER')
 });
 
 
@@ -16,9 +16,9 @@ describe("Command class", function() {
     expect( function() { new Command();}).toThrow(new Error('Command type required.'));
   });
   test("constructor sets command type", () => {
-    expect(newCommand.commandType).toBe("up")
+    expect(newCommand.commandType).toBe("MODE_CHANGE")
   });
   test("constructor sets a value passed in as the 2nd argument", () => {
-    expect(newCommand.value).toBe(5)
+    expect(newCommand.value).toBe(`LOW_POWER`)
   });
 });

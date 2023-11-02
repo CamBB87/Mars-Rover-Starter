@@ -5,7 +5,7 @@ const Command = require('../command.js');
 //       However, do NOT edit the grading tests for any reason and make sure to un-comment out your code to get the autograder to pass.
 
 beforeAll(() => {    
-    newCommand = [new Command(`up`, 5), new Command('STATUS_CHECK')]
+    newCommand = [new Command('MODE_CHANGE', 'LOW_POWER'), new Command('STATUS_CHECK')]
     newMassage = new Message(`phil`, newCommand);
 });
 
